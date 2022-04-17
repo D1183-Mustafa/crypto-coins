@@ -38,8 +38,8 @@ export default function OpenAlert() {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={() => navigate("/login")}>Login</Button>
-          <Button onClick={() => navigate("/register")}>Register</Button>
+          <Button onClick={() => navigate("/crypto-coins/login")}>Login</Button>
+          <Button onClick={() => navigate("/crypto-coins/register")}>Register</Button>
         </DialogActions>
       </Dialog>
     </div>
