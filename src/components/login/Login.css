@@ -1,0 +1,21 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35vw;
+    gap: 10px;
+    padding: 3rem;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 85vh;
+    background-color: #F7E2E2;
+}

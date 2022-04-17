@@ -1,0 +1,20 @@
+.footer-bar {
+    position: fixed;
+    background-color: #0764c1;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    height: 5vh;
+    padding-top: 1rem;
+}
+.icon {
+    color: black;
+    transform: scale(1.5);
+    transition: all 1s;
+    margin-left: 12px;
+}
+.icon:hover {
+    color: rgb(130, 0, 0);
+    transform: scale(2)
+}
