@@ -12,6 +12,7 @@ import Avatar from "@mui/material/Avatar";
 import AppContext from "../../context/AppContext";
 import AddIcon from "@mui/icons-material/Add";
 import DeleteIcon from "@mui/icons-material/Delete";
+import Hesap from "./Hesap"
 
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -39,6 +40,7 @@ function Sepet() {
 
   return (
     <div>
+      <Hesap/>
       <TableContainer component={Paper} style={{ paddingBottom: "1rem" }}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
           <TableHead>
