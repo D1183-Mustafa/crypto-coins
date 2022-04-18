@@ -9,24 +9,26 @@ import { useNavigate } from "react-router-dom";
 import AppContext from "../../context/AppContext";
 import { useContext } from "react";
 import { cikis } from "../../auth/firebase";
+import BadgeSepet from "../main/BadgeSepet";
 
 
 export default function ButtonAppBar() {
   const { currentUser } = useContext(AppContext);
-  console.log("Navbar", currentUser.displayName);
   const navigate = useNavigate();
   return (
     <Box sx={{ flexGrow: 3 }}>
+      
       <AppBar position="static">
         <Toolbar>
           <Avatar
             alt="Remy Sharp"
             src={Logo}
             sx={{ width: 56, height: 56 }}
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/crypto-coins")}
           />
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             250 Coins
+            
           </Typography>
           {currentUser ? (
             <h2 className="mb-0 text-capitalize">{currentUser?.displayName}</h2>
@@ -35,6 +37,7 @@ export default function ButtonAppBar() {
               Login
             </Button>
           )}
+          <BadgeSepet/>
 
           {currentUser ? (
             <Button color="inherit" onClick={() => cikis()}>

@@ -1,0 +1,18 @@
+.iconadd {
+    color:green;
+    transition: transform 0.5s;
+}
+.iconadd:hover {
+    color:blue;
+    transform: scale(1.5) translate(-5%, -5%);
+
+}
+.icondelete {
+    color:rgb(218, 135, 135);
+    transition: transform 1s;
+}
+.icondelete:hover {
+    color:rgb(255, 0, 0);
+    transform: scale(1.5) translate(-5%, -5%);
+
+}

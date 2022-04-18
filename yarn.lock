@@ -30,7 +30,7 @@
   resolved "https://registry.yarnpkg.com/@babel/compat-data/-/compat-data-7.17.7.tgz#078d8b833fbbcc95286613be8c716cef2b519fa2"
   integrity sha512-p8pdE6j0a29TNGebNm7NzYZWB3xVZJBZ7XGs42uAKzQo8VQ3F0By/cQCtUEABwIqw5zo6WA4NbmxsfzADzMKnQ==
 
-"@babel/core@^7.1.0", "@babel/core@^7.11.1", "@babel/core@^7.12.3", "@babel/core@^7.16.0", "@babel/core@^7.7.2", "@babel/core@^7.8.0":
+"@babel/core@^7.1.0", "@babel/core@^7.11.1", "@babel/core@^7.12.3", "@babel/core@^7.16.0", "@babel/core@^7.17.9", "@babel/core@^7.7.2", "@babel/core@^7.8.0":
   version "7.17.9"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.17.9.tgz#6bae81a06d95f4d0dec5bb9d74bbc1f58babdcfe"
   integrity sha512-5ug+SfZCpDAkVp9SFIZAzlW18rlzsOcJGaetCjkySnrXXDUw9AR8cDUm1iByTmdWM6yxX6/zycaV76w3YTF2gw==
@@ -897,7 +897,7 @@
     "@babel/helper-create-regexp-features-plugin" "^7.16.7"
     "@babel/helper-plugin-utils" "^7.16.7"
 
-"@babel/preset-env@^7.11.0", "@babel/preset-env@^7.12.1", "@babel/preset-env@^7.16.4":
+"@babel/preset-env@^7.11.0", "@babel/preset-env@^7.12.1", "@babel/preset-env@^7.16.11", "@babel/preset-env@^7.16.4":
   version "7.16.11"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.16.11.tgz#5dd88fd885fae36f88fd7c8342475c9f0abe2982"
   integrity sha512-qcmWG8R7ZW6WBRPZK//y+E3Cli151B20W1Rv7ln27vuPaXU/8TKms6jFdiJtF7UDTxcrb7mZd88tAeK9LjdT8g==
@@ -3552,7 +3552,7 @@ cliui@^7.0.2:
     strip-ansi "^6.0.0"
     wrap-ansi "^7.0.0"
 
-clsx@^1.1.1:
+clsx@^1.1.0, clsx@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/clsx/-/clsx-1.1.1.tgz#98b3134f9abbdf23b2663491ace13c5c03a73188"
   integrity sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==
@@ -5249,7 +5249,7 @@ history@^5.2.0:
   dependencies:
     "@babel/runtime" "^7.7.6"
 
-hoist-non-react-statics@^3.3.1, hoist-non-react-statics@^3.3.2:
+hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.1, hoist-non-react-statics@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
   integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
@@ -6718,6 +6718,14 @@ normalize-url@^6.0.1:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-6.1.0.tgz#40d0885b535deffe3f3147bec877d05fe4c5668a"
   integrity sha512-DlL+XwOy3NxAQ8xuC0okPgK46iuVNAK01YN7RueYBqqFeGsBjV9XmCAzAdgt+667bCl5kPh9EqKKDwnaPG1I7A==
+
+notistack@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/notistack/-/notistack-2.0.4.tgz#9e043991d4788bed3d1701d1b2f694233ad38dd8"
+  integrity sha512-kOJmKvTG91ElMzi4aHu82BDe1liQ0zMrBp+TnWJptgowDsTbeTKbZmsRqJNIj145BmlOtZsEE9xjcrN46zVo3w==
+  dependencies:
+    clsx "^1.1.0"
+    hoist-non-react-statics "^3.3.0"
 
 npm-run-path@^4.0.1:
   version "4.0.1"

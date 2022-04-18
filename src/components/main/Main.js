@@ -10,11 +10,14 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Avatar from "@mui/material/Avatar";
-
+import AddIcon from "@mui/icons-material/Add";
+import DeleteIcon from "@mui/icons-material/Delete";
 import Loading from "./Loading";
 import Searchh from "./Search";
 import AppContext from "../../context/AppContext";
 import OpenAlert from "./OpenAlert";
+import "./Main.css";
+
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -38,10 +41,8 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 function Main() {
   const [loading, setLoading] = useState(true);
-  const { setCoins, filtered, currentUser } = useContext(AppContext);
-  console.log("main", currentUser);
+  const { setCoins, filtered, currentUser,addCoin,deleteCoin } = useContext(AppContext);
   useEffect(() => {
-    console.log("merhaba");
     axios
       .get(
         "https://api.coingecko.com/api/v3/coins/markets?vs_currency=try&order=market_cap_desc&per_page=250&page=1&sparkline=false&price_change_percentage=1h%2C24h%2C7d"
@@ -55,15 +56,17 @@ function Main() {
       });
   }, []);
 
+
+  // const deneme = (e) => {
+  //   console.log(e)
+  // }
+
   return (
     <div>
-      
       <Searchh />
       {loading && <Loading />}
-      {
-        currentUser ? (
-          
-          <TableContainer component={Paper} style={{ paddingBottom: "1rem" }}>
+      {currentUser ? (
+        <TableContainer component={Paper} style={{ paddingBottom: "1rem" }}>
           <Table sx={{ minWidth: 700 }} aria-label="customized table">
             <TableHead>
               <TableRow>
@@ -74,8 +77,12 @@ function Main() {
                 <StyledTableCell align="right">1s</StyledTableCell>
                 <StyledTableCell align="right">24s</StyledTableCell>
                 <StyledTableCell align="right">7g</StyledTableCell>
-                <StyledTableCell align="right">24 Saatlik Hacim</StyledTableCell>
+                <StyledTableCell align="right">
+                  24 Saatlik Hacim
+                </StyledTableCell>
                 <StyledTableCell align="right">Piyasa Değişimi</StyledTableCell>
+                <StyledTableCell align="right">Ekle</StyledTableCell>
+                <StyledTableCell align="right">Sil</StyledTableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -92,7 +99,9 @@ function Main() {
                         sx={{ width: 70, height: 70 }}
                       />
                     </StyledTableCell>
-                    <StyledTableCell align="right">{coin?.name}</StyledTableCell>
+                    <StyledTableCell align="right">
+                      {coin?.name}
+                    </StyledTableCell>
                     <StyledTableCell align="right">
                       ₺ {coin?.current_price}
                     </StyledTableCell>
@@ -107,16 +116,17 @@ function Main() {
                         fontWeight: `900`,
                       }}
                     >
-                      {String(coin?.price_change_percentage_1h_in_currency).slice(
-                        0,
-                        5
-                      )}
+                      {String(
+                        coin?.price_change_percentage_1h_in_currency
+                      ).slice(0, 5)}
                     </StyledTableCell>
                     <StyledTableCell
                       align="right"
                       style={{
                         color: `${
-                          coin?.price_change_percentage_24h >= 0 ? "green" : "red"
+                          coin?.price_change_percentage_24h >= 0
+                            ? "green"
+                            : "red"
                         }`,
                         fontWeight: `900`,
                       }}
@@ -134,10 +144,9 @@ function Main() {
                         fontWeight: `900`,
                       }}
                     >
-                      {String(coin?.price_change_percentage_7d_in_currency).slice(
-                        0,
-                        5
-                      )}
+                      {String(
+                        coin?.price_change_percentage_7d_in_currency
+                      ).slice(0, 5)}
                     </StyledTableCell>
                     <StyledTableCell align="right">
                       ₺ {coin?.market_cap_change_24h}
@@ -145,17 +154,25 @@ function Main() {
                     <StyledTableCell align="right">
                       ₺ {coin?.market_cap}
                     </StyledTableCell>
+                    <StyledTableCell align="right">
+                      <div className="iconadd">
+                        <AddIcon onClick={() => {addCoin(coin.id)}}/>
+                        
+                         {/* <SnackBarApp/> */}
+                      </div>
+                    </StyledTableCell>
+                    <StyledTableCell align="right">
+                      <DeleteIcon className="icondelete" onClick={() => deleteCoin(coin.id)}/>
+                    </StyledTableCell>
                   </StyledTableRow>
                 );
               })}
             </TableBody>
           </Table>
         </TableContainer>
-        ) : (
-          <OpenAlert/>
-        )
-      }
-
+      ) : (
+        <OpenAlert />
+      )}
     </div>
   );
 }
