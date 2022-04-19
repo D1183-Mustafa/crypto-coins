@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/crypto-coins/static/css/main.25048afb.css",
-    "main.js": "/crypto-coins/static/js/main.9df838d3.js",
+    "main.css": "/crypto-coins/static/css/main.675a75d8.css",
+    "main.js": "/crypto-coins/static/js/main.a2901da8.js",
     "static/js/787.f3d57782.chunk.js": "/crypto-coins/static/js/787.f3d57782.chunk.js",
     "index.html": "/crypto-coins/index.html",
-    "main.25048afb.css.map": "/crypto-coins/static/css/main.25048afb.css.map",
-    "main.9df838d3.js.map": "/crypto-coins/static/js/main.9df838d3.js.map",
+    "main.675a75d8.css.map": "/crypto-coins/static/css/main.675a75d8.css.map",
+    "main.a2901da8.js.map": "/crypto-coins/static/js/main.a2901da8.js.map",
     "787.f3d57782.chunk.js.map": "/crypto-coins/static/js/787.f3d57782.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.25048afb.css",
-    "static/js/main.9df838d3.js"
+    "static/css/main.675a75d8.css",
+    "static/js/main.a2901da8.js"
   ]
 }
